@@ -1,7 +1,7 @@
 import { URL } from '../app/(home)/page';
 import styles from '../styles/movie-info.module.css';
 
-async function getMovie(id: string) {
+export async function getMovie(id: string) {
   console.log(`Fetching movies: ${Date.now()}`);
   // await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(`${URL}/${id}`); // 캐시됨
